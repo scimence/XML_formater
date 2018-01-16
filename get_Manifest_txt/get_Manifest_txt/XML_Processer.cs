@@ -45,7 +45,8 @@ namespace get_Manifest_txt
             if (attrStr.Contains("="))
             {
                 attribute iteam = new attribute();
-                string[] A = attrStr.Split('=');
+                //string[] A = attrStr.Split('=');          // 按=分割属性名称和属性值
+                string[] A = xmlNode.split(attrStr, "=");   // 仅分割为两个字符串
                 iteam.name = A[0].Trim();
                 iteam.value = A[1].Trim().Trim('"');
 
@@ -1233,7 +1234,7 @@ namespace get_Manifest_txt
         /// <summary>
         /// 将data按seprator分割为两个子串
         /// </summary>
-        public string[] split(string data, string seprator)
+        public static string[] split(string data, string seprator)
         {
             if (data.Contains(seprator))
             {

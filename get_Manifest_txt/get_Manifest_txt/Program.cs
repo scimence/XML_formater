@@ -31,7 +31,7 @@ namespace get_Manifest_txt
             manifesetFile.save();
 
             //// 以下为转化为特定的格式示例
-            //return;
+            ////return;
             //xmlNode manifest = manifesetFile.manifest;
             //xmlNode application = manifesetFile.application;
             //xmlNode LauncherActivity = manifesetFile.LauncherActivity;
